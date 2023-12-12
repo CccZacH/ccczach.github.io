@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>连续无可记录工伤事故天数</title>
+<!--CSS样式表-->
+<style type="text/css" title="">
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
+#elapseClock {
+font-family: SimHei;
+font-size: 50px;
+color:#009241;
+}
+</style>
+</head>
+
+<body>
+<!--阻止缩放功能-->
+<script>(function(){setInterval("document.body.style.zoom=1/window.devicePixelRatio",1);var viewport=document.createElement("meta");viewport.id="viewport";viewport.name="viewport";viewport.content="width=device-width, initial-scale=1";document.body.parentElement.children[0].appendChild(viewport);})()</script>
+
+<table border="0" width="1060px">
+  <tr>
+<!--左侧logo-->
+    <td width ="300px"><img src="HSE_logo.png"  alt="" /></td>
+
+<!--中间日期差值计算-->
+<td width ="350px">
+<div id="elapseClock"></div>
+
+<script type="text/javascript" language="javascript" >
+function timeElapse(date){
+var current = Date();
+var seconds = (Date.parse(current) - Date.parse(date)) / 1000;
+var days = Math.floor(seconds / (3600 * 24)+31);
+seconds = seconds % (3600 * 24);
+var hours = Math.floor(seconds / 3600);
+if (hours < 10) {
+hours = "0" + hours;
+}
+seconds = seconds % 3600;
+var minutes = Math.floor(seconds / 60);
+if (minutes < 10) {
+minutes = "0" + minutes;
+}
+seconds = seconds % 60;
+if (seconds < 10) {
+seconds = "0" + seconds;
+}
+var result = "<span class=\"digit\">" + days + "</span>天";
+document.getElementById("elapseClock").innerHTML = result;
+}
+var together = new Date();
+together.setFullYear(2019, 10, 8);
+<!--2019年10月8日最后一次工伤-->
+together.setHours(20);
+together.setMinutes(20);
+together.setSeconds(0);
+together.setMilliseconds(0);
+timeElapse(together);
+setInterval(function () {
+timeElapse(together);
+}, 500);
+</script>
+</td>
+
+<!--右侧logo-->
+    <td><img src="HSE_slogan.png"  alt="" /></td>
+  </tr>
+</table>
+
+
+</body>
+</html>
