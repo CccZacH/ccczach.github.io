@@ -45,7 +45,7 @@ seconds = seconds % 60;
 if (seconds < 10) {
 seconds = "0" + seconds;
 }
-var result = "<span class=\"digit\">" + days + hours + minutes + seconds + "</span>Day";
+var result = "<span class=\"digit\">" + days + "日" + hours + "时" + minutes + "分" + seconds + "</span>秒";
 document.getElementById("elapseClock").innerHTML = result;
 }
 var together = new Date();
