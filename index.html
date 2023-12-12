@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Á¬ĞøÎŞ¿É¼ÇÂ¼¹¤ÉËÊÂ¹ÊÌìÊı</title>
-<!--CSSÑùÊ½±í-->
+<title>è¿ç»­æ— å¯è®°å½•å·¥ä¼¤äº‹æ•…å¤©æ•°</title>
+<!--CSSæ ·å¼è¡¨-->
 <style type="text/css" title="">
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
 #elapseClock {
@@ -14,15 +14,15 @@ color:#009241;
 </head>
 
 <body>
-<!--×èÖ¹Ëõ·Å¹¦ÄÜ-->
+<!--é˜»æ­¢ç¼©æ”¾åŠŸèƒ½-->
 <script>(function(){setInterval("document.body.style.zoom=1/window.devicePixelRatio",1);var viewport=document.createElement("meta");viewport.id="viewport";viewport.name="viewport";viewport.content="width=device-width, initial-scale=1";document.body.parentElement.children[0].appendChild(viewport);})()</script>
 
 <table border="0" width="1060px">
   <tr>
-<!--×ó²àlogo-->
+<!--å·¦ä¾§logo-->
     <td width ="300px"><img src="HSE_logo.png"  alt="" /></td>
 
-<!--ÖĞ¼äÈÕÆÚ²îÖµ¼ÆËã-->
+<!--ä¸­é—´æ—¥æœŸå·®å€¼è®¡ç®—-->
 <td width ="350px">
 <div id="elapseClock"></div>
 
@@ -45,12 +45,12 @@ seconds = seconds % 60;
 if (seconds < 10) {
 seconds = "0" + seconds;
 }
-var result = "<span class=\"digit\">" + days + "</span>Ìì";
+var result = "<span class=\"digit\">" + days + "</span>å¤©";
 document.getElementById("elapseClock").innerHTML = result;
 }
 var together = new Date();
 together.setFullYear(2019, 10, 8);
-<!--2019Äê10ÔÂ8ÈÕ×îºóÒ»´Î¹¤ÉË-->
+<!--2019å¹´10æœˆ8æ—¥æœ€åä¸€æ¬¡å·¥ä¼¤-->
 together.setHours(20);
 together.setMinutes(20);
 together.setSeconds(0);
@@ -62,7 +62,7 @@ timeElapse(together);
 </script>
 </td>
 
-<!--ÓÒ²àlogo-->
+<!--å³ä¾§logo-->
     <td><img src="HSE_slogan.png"  alt="" /></td>
   </tr>
 </table>
