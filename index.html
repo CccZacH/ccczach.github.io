@@ -6,9 +6,10 @@
 <style type="text/css" title="">
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
 #elapseClock {
-font-family: SimHei;
+font-family: Arial;
 font-size: 50px;
-color:#009241;
+color:#FFFFFF;
+font-weight: bold;
 }
 </style>
 </head>
@@ -19,8 +20,6 @@ color:#009241;
 
 <table border="0" width="1060px">
   <tr>
-<!--左侧logo-->
-    <td width ="300px"><img src="HSE_logo.png"  alt="" /></td>
 
 <!--中间日期差值计算-->
 <td width ="350px">
@@ -45,7 +44,7 @@ seconds = seconds % 60;
 if (seconds < 10) {
 seconds = "0" + seconds;
 }
-var result = "<span class=\"digit\">" + days + "</span> Days";
+var result = days ;
 document.getElementById("elapseClock").innerHTML = result;
 }
 var together = new Date();
@@ -61,12 +60,5 @@ timeElapse(together);
 }, 500);
 </script>
 </td>
-
-<!--右侧logo-->
-    <td><img src="HSE_slogan.png"  alt="" /></td>
-  </tr>
-</table>
-
-
 </body>
 </html>
